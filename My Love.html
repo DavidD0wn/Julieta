@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Julieta ❤️</title>
+    <style>
+        body {
+            background-color: #000000;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            color: #ff69b4;
+            margin: 0;
+            padding: 0;
+            overflow: auto; /* Asegura que se pueda hacer scroll si es necesario */
+            background-image: url('imagen7.png');
+            background-size: 85% auto; /* Hice el fondo más ancho */
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 25vh; /* Asegura que cubra toda la altura de la pantalla */
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            color: #000000; /* Título en color negro */
+        }
+        #start-btn {
+            background-color: #ff69b4;
+            color: black;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 100px;
+        }
+        .collage {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            margin-top: 50px;
+            z-index: 10; /* Asegura que el collage esté por encima del fondo */
+            padding-bottom: 100px; /* Añadido para asegurarse de que haya espacio suficiente para las imágenes */
+        }
+        .collage img {
+            width: 300px;
+            height: auto;
+            border: 5px solid black;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 105, 180, 0.5);
+            transition: transform 0.3s;
+        }
+        .collage img:hover {
+            transform: scale(1.05);
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title">Para tí ❤️</h1>
+    <button id="start-btn">Sorpresa</button>
+
+    <div class="collage" id="collage">
+	<img src="imagen9.jpeg" alt="Imagen 9">
+	<img src="imagen8.jpeg" alt="Imagen 8">
+        <img src="imagen1.jpeg" alt="Imagen 1">
+        <img src="imagen2.jpeg" alt="Imagen 2">
+        <img src="imagen3.jpeg" alt="Imagen 3">
+        <img src="imagen4.jpeg" alt="Imagen 4">
+        <img src="imagen5.jpeg" alt="Imagen 5">
+        <img src="imagen6.jpeg" alt="Imagen 6">
+    </div>
+
+    <audio id="myAudio" loop>
+        <source src="cancion.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+
+    <script>
+        const btn = document.getElementById('start-btn');
+        const audio = document.getElementById('myAudio');
+        const collage = document.getElementById('collage');
+        const title = document.getElementById('title');
+
+        btn.addEventListener('click', () => {
+            audio.play();
+            title.innerHTML = 'Nuestra Historia <3';
+            btn.style.display = 'none';
+            collage.style.opacity = 1;
+        });
+    </script>
+
+</body>
+</html>
+

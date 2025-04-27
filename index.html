@@ -16,7 +16,7 @@
             background-size: cover; /* Ajusta el fondo para cubrir toda la pantalla */
             background-position: center;
             background-repeat: no-repeat;
-            min-height: 100vh; /* Asegura que cubra toda la altura de la pantalla */
+            min-height: calc(100vh - 100px); /* Ajusta el espacio en la parte inferior */
         }
         h1 {
             font-size: 2.5em;
@@ -41,9 +41,9 @@
             gap: 15px;
             opacity: 0;
             transition: opacity 1s ease-in-out;
-            margin-top: 50px;
+            margin-top: 30px; /* Ajusta el margen superior */
             z-index: 10; /* Asegura que el collage esté por encima del fondo */
-            padding-bottom: 50px; /* Añadido para asegurarse de que haya espacio suficiente para las imágenes */
+            padding-bottom: 30px; /* Menos espacio en la parte inferior */
         }
         .collage img {
             width: 250px;

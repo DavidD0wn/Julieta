@@ -13,13 +13,13 @@
             padding: 0;
             overflow: auto; /* Asegura que se pueda hacer scroll si es necesario */
             background-image: url('imagen7.png');
-            background-size: 85% auto; /* Hice el fondo más ancho */
+            background-size: cover; /* Ajusta el fondo para cubrir toda la pantalla */
             background-position: center;
             background-repeat: no-repeat;
-            min-height: 25vh; /* Asegura que cubra toda la altura de la pantalla */
+            min-height: 100vh; /* Asegura que cubra toda la altura de la pantalla */
         }
         h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin-top: 20px;
             margin-bottom: 30px;
             color: #000000; /* Título en color negro */
@@ -29,10 +29,10 @@
             color: black;
             border: none;
             padding: 15px 30px;
-            font-size: 1.5em;
+            font-size: 1.2em;
             border-radius: 10px;
             cursor: pointer;
-            margin-top: 100px;
+            margin-top: 50px;
         }
         .collage {
             display: flex;
@@ -43,10 +43,10 @@
             transition: opacity 1s ease-in-out;
             margin-top: 50px;
             z-index: 10; /* Asegura que el collage esté por encima del fondo */
-            padding-bottom: 100px; /* Añadido para asegurarse de que haya espacio suficiente para las imágenes */
+            padding-bottom: 50px; /* Añadido para asegurarse de que haya espacio suficiente para las imágenes */
         }
         .collage img {
-            width: 300px;
+            width: 250px;
             height: auto;
             border: 5px solid black;
             border-radius: 10px;
@@ -59,6 +59,21 @@
         audio {
             display: none;
         }
+
+        /* Media Queries para pantallas pequeñas (como iPhone) */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em; /* Reduce el tamaño del título */
+                margin-top: 10px;
+            }
+            .collage img {
+                width: 200px; /* Ajusta el tamaño de las imágenes */
+            }
+            #start-btn {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -67,8 +82,8 @@
     <button id="start-btn">Sorpresa</button>
 
     <div class="collage" id="collage">
-	<img src="imagen9.jpeg" alt="Imagen 9">
-	<img src="imagen8.jpeg" alt="Imagen 8">
+        <img src="imagen9.jpeg" alt="Imagen 9">
+        <img src="imagen8.jpeg" alt="Imagen 8">
         <img src="imagen1.jpeg" alt="Imagen 1">
         <img src="imagen2.jpeg" alt="Imagen 2">
         <img src="imagen3.jpeg" alt="Imagen 3">
@@ -98,4 +113,3 @@
 
 </body>
 </html>
-

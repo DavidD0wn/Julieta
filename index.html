@@ -16,7 +16,10 @@
             background-size: cover; /* Ajusta el fondo para cubrir toda la pantalla */
             background-position: center;
             background-repeat: no-repeat;
-            min-height: calc(100vh - 100px); /* Ajusta el espacio en la parte inferior */
+            min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centra el contenido verticalmente */
         }
         h1 {
             font-size: 2.5em;
@@ -41,7 +44,6 @@
             gap: 15px;
             opacity: 0;
             transition: opacity 1s ease-in-out;
-            margin-top: 100px; /* Ajusta el margen superior para mover el collage más abajo */
             z-index: 10; /* Asegura que el collage esté por encima del fondo */
             padding-bottom: 30px; /* Menos espacio en la parte inferior */
         }
